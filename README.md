@@ -1,7 +1,7 @@
 ## Infodeslib: Python Library for Dynamic Ensemble Learning using Late Fusion of Multimodal Data
 There has been a notable increase in research focusing on dynamic selection (DS) techniques within the field of ensemble learning. This leads to the development of various techniques for ensembling multiple classifiers for a specific instance or set of instances during the prediction phase. Despite this progress, the design and development of DS approaches with late fusion settings and their explainability remain unexplored. This work proposes an open-source Python library, Infodeslib, to address this gap. The library provides an implementation of several DS techniques, including four dynamic classifier selections and seven dynamic ensemble selection techniques, all of which are integrated with late data fusion settings and novel explainability features. Infodeslib offers flexibility and customization options, making it a versatile tool for various complex applications that require the fusion of multimodal data and various explainability features. Multimodal data, which integrates information from diverse sources or sensor modalities, is a common and essential setting for real-world problems, enhancing the robustness and depth of data analysis. These data can be fused in two main ways: early fusion, where different modalities are combined at the feature level before model training, and late fusion, where each modality is processed separately and the results are combined at the decision level. 
 
-For more details, please check [ourpaper](https://openreview.net/forum?id=WtM2HEkxwo). 
+For more details, please check [our paper](https://openreview.net/forum?id=WtM2HEkxwo). 
 
 ### Documentation   
 https://infodeslib.readthedocs.io/en/latest/ 
