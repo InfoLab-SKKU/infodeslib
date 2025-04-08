@@ -121,3 +121,15 @@ query = X_test.iloc[[index]]
 ## Make plot=True 
 knorau.predict(query, plot=True)
 ```
+
+## Citation
+We would appreciate it if you could cite our work when using our code.
+
+```bibtex
+@inproceedings{juraev2024infodeslib,
+  title={Infodeslib: Python Library for Dynamic Ensemble Learning using Late Fusion of Multimodal Data},
+  author={Juraev, Firuz and El-Sappagh, Shaker and Abuhmed, Tamer},
+  booktitle={ACM SIGKDD, Fourth Workshop on Knowledge-infused Learning (KiL'24)},
+  year={2024}
+}
+```
