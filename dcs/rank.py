@@ -193,16 +193,17 @@ class Rank:
         
         for i in range(num_modalities): 
             preds = self.pool_classifiers[i].predict(self.X_dsel[self.feature_subsets[i]])
-            coverage_table["Model {}".format(i)] = preds 
+            coverage_table["Model {}".format(i)] = np.asarray(preds)
         
-        coverage_table['True'] = self.y_dsel 
+        # Match predictions and labels by row position, not pandas index.
+        coverage_table['True'] = np.asarray(self.y_dsel)
         
         # coverage_table.to_csv("coverage_table.csv", index=False)
         
         for j in range(num_modalities): 
             coverage_table["Model {}".format(j)] = coverage_table["Model {}".format(j)] == coverage_table['True'] 
         
-        coverage_table['coverage'] = coverage_table.iloc[:, :].sum(axis=1) 
+        coverage_table['coverage'] = coverage_table.iloc[:, :num_modalities].sum(axis=1)
         
         score = 1 - coverage_table['coverage'].tolist().count(0) / coverage_table.shape[0]  
         score = round(score * 100, 2)
